@@ -51,10 +51,12 @@
   <constants>Constant.МаксимальнаяОценкаСтудента</constants>
   <constants>Constant.НазваниеУниверситета</constants>
   <catalogs>Catalog.Группы</catalogs>
+  <catalogs>Catalog.Предметы</catalogs>
   <catalogs>Catalog.Сотрудники</catalogs>
   <catalogs>Catalog.Студенты</catalogs>
   <catalogs>Catalog.Файлы</catalogs>
   <catalogs>Catalog.Факультеты</catalogs>
+  <documents>Document.ВедомостьОценок</documents>
   <documents>Document.ОплатаОбучения</documents>
   <documents>Document.ПриказОЗачислении</documents>
   <documents>Document.ПриказОПереводе</documents>
@@ -62,4 +64,5 @@
   <enums>Enum.Пол</enums>
   <informationRegisters>InformationRegister.Учащиеся</informationRegisters>
   <accumulationRegisters>AccumulationRegister.Взаиморасчеты</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.Оценки</accumulationRegisters>
 </mdclass:Configuration>

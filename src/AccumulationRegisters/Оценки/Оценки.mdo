@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="37720ac7-31ca-43b6-9048-557865e6a7c3">
+  <producedTypes>
+    <selectionType typeId="5140af41-72de-4187-953c-b9d0ecd815d5" valueTypeId="bd120a43-d340-4f76-96ed-2c4767a05632"/>
+    <listType typeId="76829ce2-b019-44a5-bf6b-0e5cc8104a18" valueTypeId="87ce1132-27d6-4e48-865c-e14dd4ea1b5d"/>
+    <managerType typeId="db4aa0f0-39bd-4392-bbee-6dae215e534a" valueTypeId="42627697-225b-4f08-8c49-3d41eca1f9ff"/>
+    <recordSetType typeId="a9577f87-8462-4f4c-8e32-3716fc37794f" valueTypeId="99d6ecf6-546c-4486-82e0-620897aee4fd"/>
+    <recordKeyType typeId="06a81038-72ab-422b-9098-d8e2ee8dfb80" valueTypeId="2e8c1b1f-82b0-4e7e-8833-79c6c22cb40b"/>
+    <recordType typeId="ececeb5d-f476-4de0-b09a-2253ae34b975" valueTypeId="c5e0dae8-5f1c-4f3b-8ff1-27136f08a601"/>
+  </producedTypes>
+  <name>Оценки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оценки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="37370c44-bafe-4bee-9f97-47aa56fbff62">
+    <name>Оценка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="25bc6000-a134-4ce2-aea5-14362629d18c">
+    <name>Студент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Студент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Студенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d5bf2237-e3f4-44dc-82f3-419bb55df418">
+    <name>Предмет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предмет</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Предметы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
