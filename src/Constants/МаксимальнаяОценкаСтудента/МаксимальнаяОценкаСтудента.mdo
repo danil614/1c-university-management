@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5cee631f-8816-47c5-bd68-dee50839284b">
+  <producedTypes>
+    <managerType typeId="5e6e8ddc-a13a-4d22-be5f-8e085551bcab" valueTypeId="6487d477-a388-4a57-9d7c-145b8628ac92"/>
+    <valueManagerType typeId="4b6eb0e1-d1f8-4ddb-af23-b358a28f0a0c" valueTypeId="953b4c50-c1d9-41ed-b86e-747fffef28da"/>
+    <valueKeyType typeId="88f81c98-f283-4065-bef6-f02b2bef82cd" valueTypeId="ca016925-ba79-4b5b-9b6f-bf04f9bb3efc"/>
+  </producedTypes>
+  <name>МаксимальнаяОценкаСтудента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Максимальная оценка студента</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>4</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

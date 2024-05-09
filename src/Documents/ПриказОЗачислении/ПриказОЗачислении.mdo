@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7b7ab613-23a0-4cce-8bd1-cc863289d702">
+  <producedTypes>
+    <objectType typeId="fa1e3eab-74aa-41b3-915d-9fc967a5510c" valueTypeId="9602e702-46ef-4d2b-9bdd-06e39a80854b"/>
+    <refType typeId="e5d68af3-6d6f-4b27-a2be-3d9a94c8fe19" valueTypeId="7b1226a1-f6d0-49ff-8db1-2d2ef926eeea"/>
+    <selectionType typeId="5b04a4ff-bbe7-46b1-a5c5-681a40eae5d7" valueTypeId="1ab7f54a-8ffc-4d7c-91bb-ba93ee98c562"/>
+    <listType typeId="ba235db3-b495-4549-bd68-058c8c0f191d" valueTypeId="da539350-b71a-4828-b889-34782f8381b5"/>
+    <managerType typeId="fa0ff092-c32f-4991-badc-f60475f519a5" valueTypeId="6b38bef0-97c4-427d-b914-86189fff5123"/>
+  </producedTypes>
+  <name>ПриказОЗачислении</name>
+  <synonym>
+    <key>ru</key>
+    <value>Приказ о зачислении</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПриказОЗачислении.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Приказы о зачислении</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <registerRecords>InformationRegister.Учащиеся</registerRecords>
+  <registerRecords>AccumulationRegister.Взаиморасчеты</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="3d202c09-7566-4d4c-b57a-cffa5e08a094">
+    <name>Факультет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Факультет</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Факультеты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d88d273a-7514-445c-a00f-d448c1522800">
+    <name>УчебнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учебная группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Группы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceParameterLinks>
+      <name>Отбор.Факультет</name>
+      <field>Document.ПриказОЗачислении.Attribute.Факультет</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="50cfb579-810d-411c-b1e8-6bf46d9d881e">
+    <name>Курс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курс</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="9ed3013e-1a93-4e40-b36f-ce2254aab311">
+    <producedTypes>
+      <objectType typeId="8706dc31-861d-4afe-aad7-65ebec47b893" valueTypeId="326f4b4d-f2b3-4e7e-9520-37c55408d3df"/>
+      <rowType typeId="ff737ab2-c7ba-4ab1-bcd9-7ba60f9a3dcf" valueTypeId="0887c5ac-345a-45e8-bec0-55476b685c15"/>
+    </producedTypes>
+    <name>Студенты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Студенты</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="2a3eef15-6fad-4ee9-9240-6371b2d9a5c4">
+      <name>Студент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Студент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Студенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e318d93f-1c7f-414f-bdf1-5318dfd0352b">
+      <name>ЯвляетсяСтаростой</name>
+      <synonym>
+        <key>ru</key>
+        <value>Является старостой</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="eb9ac69b-f5c8-45a9-b80b-b53f0ae0dce4">
+      <name>ОбучениеНаБюджетнойОснове</name>
+      <synonym>
+        <key>ru</key>
+        <value>Обучение на бюджетной основе</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5bd2672b-c192-4615-943b-6f7d581b35a0">
+      <name>СуммаОбучения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма обучения</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

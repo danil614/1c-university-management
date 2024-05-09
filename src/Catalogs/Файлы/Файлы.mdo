@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1c5fd03c-5d89-4490-8978-6f9d53ee0a34">
+  <producedTypes>
+    <objectType typeId="856a8aeb-922e-4afe-b1ff-9ff6c2033c02" valueTypeId="cc04f547-6c17-4e0f-b5a6-c1ad9fa3db74"/>
+    <refType typeId="992abc72-8198-4f2c-bbe2-698b55ede5ad" valueTypeId="374cdb57-ae6e-4f3c-840a-2bfd5db3d8bf"/>
+    <selectionType typeId="c78079ab-ac33-4fcc-be13-4c4f34d3001e" valueTypeId="68a4a3f4-5ee3-4cbf-bbc8-1db74f621ecf"/>
+    <listType typeId="f8c875db-0114-49c5-8a8b-712c0fe88767" valueTypeId="cab3157e-d812-4552-8552-a54efd242342"/>
+    <managerType typeId="2b802b26-372d-4b7e-8b47-6e67902418a6" valueTypeId="7c85dd87-63be-4c42-adea-6ef3f5317f87"/>
+  </producedTypes>
+  <name>Файлы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Файлы</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Файлы.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Файл</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.Файлы.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="a4131d0d-258b-44f5-b459-f00cb77e1a47">
+    <name>Файл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файл</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="a29ebefb-e25f-488e-b1c6-6eb31d5f8901">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

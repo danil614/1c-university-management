@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="09c4f458-b3cf-47aa-8775-0a5aafbda8c4">
+  <producedTypes>
+    <managerType typeId="6641df20-0af4-4103-89b0-6627156ccf2b" valueTypeId="363f4173-f558-429d-8ef9-2e071026426b"/>
+    <valueManagerType typeId="0737e1e3-2107-4bd1-80cd-959a66d3a5b7" valueTypeId="7b5e4609-9f12-489c-a4fe-18df5d58bc84"/>
+    <valueKeyType typeId="c24d04c8-feab-40c9-9f14-23ca4c4bdc75" valueTypeId="66ba6ad3-1a1b-4703-8afd-61f9fa2c5c87"/>
+  </producedTypes>
+  <name>КоличествоВозможныхКурсов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Количество возможных курсов</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>4</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

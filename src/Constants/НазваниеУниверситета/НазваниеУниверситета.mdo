@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9e2c66df-97fb-408a-8e97-e25f0b8faf28">
+  <producedTypes>
+    <managerType typeId="d8f3069a-316e-4da8-afae-3d7e151866ba" valueTypeId="89496f49-b5ad-4ca0-92ce-82ee3c3a5314"/>
+    <valueManagerType typeId="8e54e149-29f8-498b-91d6-5d30169fd900" valueTypeId="7575b324-55e5-4850-bcf3-c8f497b9885f"/>
+    <valueKeyType typeId="02b5c824-53b6-4403-944b-634feab176c1" valueTypeId="e7490508-7d3a-4ba9-bfc3-3f9b63c5b192"/>
+  </producedTypes>
+  <name>НазваниеУниверситета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Название университета</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>250</length>
+    </stringQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

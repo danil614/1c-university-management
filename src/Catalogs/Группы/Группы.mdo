@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="758768f0-cd14-44f3-8790-eebadf6d5afc">
+  <producedTypes>
+    <objectType typeId="51d71c72-da1b-424f-9fa6-8edd9931f60e" valueTypeId="3fb9ed03-b32b-49a6-bdf8-cbf5e92dfa24"/>
+    <refType typeId="e99ed295-eee2-49da-9311-00c4159fc2e5" valueTypeId="fe5af619-3346-4e9c-ac65-bafda33d652e"/>
+    <selectionType typeId="5c82ae16-3874-4645-8dcf-a36c3d987f14" valueTypeId="d857702f-83c8-43c3-9113-96a26d139ee6"/>
+    <listType typeId="d65a24c6-c3d5-4424-a5e8-b0822afc035e" valueTypeId="5dd5f1db-3e52-4fef-b6a1-8f9b03d63456"/>
+    <managerType typeId="5d7c2183-ff3d-4e4c-bfa3-eff2d641dbf5" valueTypeId="15d2f40c-f1be-48e3-8666-64fddfe17734"/>
+  </producedTypes>
+  <name>Группы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Группы</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Группы.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.Группы.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Группа</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.Группы.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="38d78013-d741-4ff1-845e-df5855a4b08a">
+    <name>Факультет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Факультет</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Факультеты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="2df4a238-9129-4dd4-bad2-6b544f4cd54f">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>
