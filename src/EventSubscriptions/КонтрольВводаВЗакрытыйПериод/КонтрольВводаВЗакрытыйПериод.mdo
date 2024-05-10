@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fbee0fc0-eba4-4afd-b721-c1ea0510f21e">
+  <name>КонтрольВводаВЗакрытыйПериод</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль ввода в закрытый период</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ВедомостьОценок</types>
+    <types>DocumentObject.ОплатаОбучения</types>
+    <types>DocumentObject.ПриказОЗачислении</types>
+    <types>DocumentObject.ПриказОПереводе</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ЗапретИзмененияДокументовВызовСервера.КонтрольВводаВЗакрытыйПериодПередЗаписью</handler>
+</mdclass:EventSubscription>

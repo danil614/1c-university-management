@@ -3,7 +3,7 @@
   <name>УправлениеУниверситетом</name>
   <synonym>
     <key>ru</key>
-    <value>ДЗ №2 Федосеев Данил Сергеевич</value>
+    <value>ДЗ №3 Федосеев Данил Сергеевич</value>
   </synonym>
   <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="e3987529-c8b0-48c3-b883-1ce666c00187"/>
   <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="6c265569-7c32-48ac-9360-da50afe8c879"/>
@@ -16,7 +16,7 @@
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Федосеев Данил Сергеевич</vendor>
-  <version>1.2.0.1</version>
+  <version>1.3.0.1</version>
   <usedMobileApplicationFunctionalities>
     <functionality>
       <use>true</use>
@@ -44,11 +44,13 @@
     </synonym>
     <languageCode>ru</languageCode>
   </languages>
+  <commonModules>CommonModule.ЗапретИзмененияДокументовВызовСервера</commonModules>
   <commonModules>CommonModule.ОбработкаЗаполненияВедомостиВызовСервера</commonModules>
   <commonModules>CommonModule.ОбработкаЗаполненияПриказаВызовСервера</commonModules>
   <commonModules>CommonModule.ОбработкаНаименованияВызовСервера</commonModules>
   <commonModules>CommonModule.ПолучениеСтудентовВызовСервера</commonModules>
   <commonModules>CommonModule.ПроверкаДнейРожденияВызовСервера</commonModules>
+  <eventSubscriptions>EventSubscription.КонтрольВводаВЗакрытыйПериод</eventSubscriptions>
   <constants>Constant.ЗакрытыйПериод</constants>
   <constants>Constant.КоличествоВозможныхКурсов</constants>
   <constants>Constant.МаксимальнаяОценкаСтудента</constants>
