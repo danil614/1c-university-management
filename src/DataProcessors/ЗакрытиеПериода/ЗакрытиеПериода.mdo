@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="16491554-250c-482c-8669-ec58aa17b6bd">
+  <producedTypes>
+    <objectType typeId="2ffde232-7195-40b2-8ea4-f68c00872af2" valueTypeId="4b78ce45-83d2-4f1c-bf9c-ab2ccbf1e96e"/>
+    <managerType typeId="0609c8f5-26b7-4a09-8ee6-39b22b42002f" valueTypeId="e1d9c720-ec57-4e03-91e5-34a2dce7e364"/>
+  </producedTypes>
+  <name>ЗакрытиеПериода</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закрытие периода</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ЗакрытиеПериода.Form.Форма</defaultForm>
+  <forms uuid="8bf3861c-23ff-4d30-94d7-e59b358e8ed9">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

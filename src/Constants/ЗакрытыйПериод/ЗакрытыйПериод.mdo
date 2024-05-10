@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f15b0876-1960-41e3-b952-63d454f3e857">
+  <producedTypes>
+    <managerType typeId="0d6bb3cd-7d72-44c2-a3d3-4857d4c2d81c" valueTypeId="83f55d8d-734b-47cc-b076-93f27699eef4"/>
+    <valueManagerType typeId="9e2c090f-d153-45c1-a2db-1069e94c3230" valueTypeId="6c4ca10a-c687-4695-a5af-653165a6b96f"/>
+    <valueKeyType typeId="7aca2a5e-3352-45ea-94c0-bb45efffe7c1" valueTypeId="51386abc-1130-44f7-838c-ce2bf3398f42"/>
+  </producedTypes>
+  <name>ЗакрытыйПериод</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закрытый период</value>
+  </synonym>
+  <type>
+    <types>Date</types>
+    <dateQualifiers>
+      <dateFractions>Date</dateFractions>
+    </dateQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
