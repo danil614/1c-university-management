@@ -44,8 +44,10 @@
     </synonym>
     <languageCode>ru</languageCode>
   </languages>
+  <commonModules>CommonModule.ОбработкаЗаполненияВедомостиВызовСервера</commonModules>
   <commonModules>CommonModule.ОбработкаЗаполненияПриказаВызовСервера</commonModules>
   <commonModules>CommonModule.ОбработкаНаименованияВызовСервера</commonModules>
+  <commonModules>CommonModule.ПолучениеСтудентовВызовСервера</commonModules>
   <commonModules>CommonModule.ПроверкаДнейРожденияВызовСервера</commonModules>
   <constants>Constant.КоличествоВозможныхКурсов</constants>
   <constants>Constant.МаксимальнаяОценкаСтудента</constants>
