@@ -67,6 +67,7 @@
   <documents>Document.ПриказОПереводе</documents>
   <enums>Enum.ВидКонтактнойИнформации</enums>
   <enums>Enum.Пол</enums>
+  <reports>Report.СписокСтудентов</reports>
   <dataProcessors>DataProcessor.ЗакрытиеПериода</dataProcessors>
   <informationRegisters>InformationRegister.Учащиеся</informationRegisters>
   <accumulationRegisters>AccumulationRegister.Взаиморасчеты</accumulationRegisters>
