@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Факультет</dataPath>
+			<field>Факультет</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОплатыСтудентов.Студент КАК Студент,
+	МАКСИМУМ(Учащиеся.Период) КАК ПериодРегистрУчащиеся,
+	ОплатыСтудентов.Период КАК ПериодРегистрВзаиморасчеты
+ПОМЕСТИТЬ ВТ_ПериодРегистраУчащиесяНаМоментОплаты
+ИЗ
+	(ВЫБРАТЬ РАЗЛИЧНЫЕ
+		Взаиморасчеты.Период КАК Период,
+		Взаиморасчеты.Студент КАК Студент
+	ИЗ
+		РегистрНакопления.Взаиморасчеты КАК Взаиморасчеты
+	ГДЕ
+		Взаиморасчеты.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И Взаиморасчеты.Регистратор ССЫЛКА Документ.ОплатаОбучения) КАК ОплатыСтудентов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Учащиеся КАК Учащиеся
+		ПО (ОплатыСтудентов.Период &gt;= Учащиеся.Период)
+		И (ОплатыСтудентов.Студент = Учащиеся.Студент)
+СГРУППИРОВАТЬ ПО
+	ОплатыСтудентов.Студент,
+	ОплатыСтудентов.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Учащиеся.Факультет КАК Факультет,
+	Учащиеся.Студент КАК Студент,
+	ВТ_ПериодРегистраУчащиесяНаМоментОплаты.ПериодРегистрВзаиморасчеты КАК ПериодРегистрВзаиморасчеты
+ПОМЕСТИТЬ ВТ_ФакультетНаМоментОплаты
+ИЗ
+	ВТ_ПериодРегистраУчащиесяНаМоментОплаты КАК ВТ_ПериодРегистраУчащиесяНаМоментОплаты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Учащиеся КАК Учащиеся
+		ПО ВТ_ПериодРегистраУчащиесяНаМоментОплаты.Студент = Учащиеся.Студент
+		И ВТ_ПериодРегистраУчащиесяНаМоментОплаты.ПериодРегистрУчащиеся = Учащиеся.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ФакультетНаМоментОплаты.Факультет КАК Факультет,
+	Взаиморасчеты.Сумма КАК Сумма
+ИЗ
+	ВТ_ФакультетНаМоментОплаты КАК ВТ_ФакультетНаМоментОплаты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Взаиморасчеты КАК Взаиморасчеты
+		ПО (ВТ_ФакультетНаМоментОплаты.Студент = Взаиморасчеты.Студент)
+		И (ВТ_ФакультетНаМоментОплаты.ПериодРегистрВзаиморасчеты = Взаиморасчеты.Период)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+		<group>Факультет</group>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>c3697ad0-910d-4f94-b6e3-803c8814dc49</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">&amp;Период.ДатаНачала</dcscor:value>
+					<dcsset:userSettingID>728d43ce-5dcf-41fd-a65b-0a0b791f487c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">&amp;Период.ДатаОкончания</dcscor:value>
+					<dcsset:userSettingID>6d7ac569-1e16-4454-99ba-98d10f51a0f3</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Факультет</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:point>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">Column3D</dcscor:value>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:ChartLabelType">Value</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ТипДиаграммы.ОтображатьТаблицуДанных</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

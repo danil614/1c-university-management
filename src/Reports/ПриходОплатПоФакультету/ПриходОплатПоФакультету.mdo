@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3eaed401-e76a-4b84-9883-4c7f25df4166">
+  <producedTypes>
+    <objectType typeId="9644f13e-c6da-454a-ae91-af9f69ab7e50" valueTypeId="45961726-8fad-4e7b-90d8-6053eeb2619b"/>
+    <managerType typeId="6ca86b35-dac9-46f8-b683-43f8f14eb686" valueTypeId="7aa6f61a-216c-446f-8827-6452ecebe6d3"/>
+  </producedTypes>
+  <name>ПриходОплатПоФакультету</name>
+  <synonym>
+    <key>ru</key>
+    <value>Приход оплат по факультету</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ПриходОплатПоФакультету.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="6d5260cb-bcde-488c-a8b2-b531a96042b5">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>
