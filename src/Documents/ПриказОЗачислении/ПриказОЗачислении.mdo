@@ -171,4 +171,20 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
   </tabularSections>
+  <templates uuid="432843de-5f2c-4d74-8cb8-4dae7a693662">
+    <name>ПлатнаяФормаОбучения</name>
+  </templates>
+  <commands uuid="8d3bf9ec-36da-4b37-904b-86b5517cc012">
+    <name>ПлатнаяФормаОбучения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Печать платной формы</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.ПриказОЗачислении</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
 </mdclass:Document>
