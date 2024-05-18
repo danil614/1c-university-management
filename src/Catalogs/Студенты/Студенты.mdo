@@ -222,4 +222,20 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
+  <templates uuid="a8a5eeef-55b5-4140-8b15-5d1bc9e8f9a8">
+    <name>ЛичнаяКарточкаСтудента</name>
+  </templates>
+  <commands uuid="c0d1f8fc-7c44-4998-b7f1-5e4e4c87a9a6">
+    <name>ЛичнаяКарточкаСтудента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Личная карточка студента</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>CatalogRef.Студенты</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
 </mdclass:Catalog>
